@@ -123,3 +123,11 @@ body {
   cursor: pointer;
   background: #555;
 }
+
+.App{
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300 !important;
+}

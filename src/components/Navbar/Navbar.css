@@ -3,14 +3,25 @@
   padding: 1rem;
   flex-wrap: wrap;
   border-bottom: 1px solid lightgray;
+  justify-items: center;
 }
 
 .nav-item{
+  background: white;
   margin-left: auto;
   margin-right: auto;
   padding: .5rem 1rem .5rem 1rem;
   border: 1px solid gray;
   border-radius: 1rem;
-  color: orangered;
+  color: lightcoral;
   cursor: pointer;
+  font-weight: 500 !important;
+}
+
+.nav-item:hover {
+  background: lightgrey;
+}
+
+.na-active{
+  box-shadow: .2rem .3rem .5rem gray;
 }

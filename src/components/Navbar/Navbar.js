@@ -4,28 +4,34 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateSelectedCategory } from "../../store/actions/newsCategoryActions";
 
 const NavItem = (props) => {
+
   const dispatch = useDispatch();
+
   return (
-    <div
+    <button
       className="nav-item"
       onClick={() => dispatch(updateSelectedCategory(props.newsItem))}
+      onMouseDown={(e) => e.preventDefault()}
     >
       {props.newsItem}
-    </div>
+
+    </button>
   );
 };
 
+
 const Navbar = () => {
+
   const [newsCategories] = useSelector(({ newsCategories }) => [
     newsCategories.newsCategories
   ]);
 
   return (
-    <div className="navbar-container">
+    <nav className="navbar-container">
       {newsCategories.map((item) => (
         <NavItem key={item} newsItem={item} />
       ))}
-    </div>
+    </nav>
   );
 };
 
